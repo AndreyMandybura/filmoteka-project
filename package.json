@@ -1,0 +1,35 @@
+{
+  "name": "filmoteka-project",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://AndreyMandybura.github.io/filmoteka-project",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /filmoteka-project/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyMandybura/filmoteka-project.git"
+  },
+  "keywords": [],
+  "author": "Lorem-Ipsum Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.4.1",
+    "axios": "^0.22.0",
+    "basiclightbox": "^5.0.4",
+    "debounce": "^1.2.1",
+    "keen-slider": "^5.5.1"
+  }
+}

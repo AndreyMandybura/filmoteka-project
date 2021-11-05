@@ -1,0 +1,19 @@
+{{#each this}}
+<li class="slider-card" data-id='{{id}}'>
+    <div class="thumb">
+        <p class="movie-name-slider">
+            {{title}}
+        <button class="trailer-btn" aria-label="Watch trailer">
+            <img src="https://raw.githubusercontent.com/karaaa006/filmoteka-project/375385fb47c596b50883c509eb00fe2281ad2939/src/images/icons-play-button-2.svg" alt="Youtube Icon"/>
+        </button>
+
+        </p>
+        <img class="slider-image" src="https://image.tmdb.org/t/p/w500{{poster_path}}" alt="{{title}} {{name}}"
+            onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/karaaa006/filmoteka-project/main/src/images/no-poster.png';" />
+        {{#if vote_average}}
+          <span class='rating-slider {{rating_color}}'>{{vote_average}}</span>
+        {{else}}<span class='rating-slider'>-</span>
+        {{/if}}
+    </div>
+  </li>
+{{/each}}

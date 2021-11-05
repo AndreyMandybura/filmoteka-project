@@ -1,0 +1,18 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+@import './utils/vars';
+@import './base/base';
+@import './utils/mixins';
+@import './utils/utils-classes';
+@import './components/header_library';
+@import './components/film-card_modal';
+@import './components/slider';
+@import './components/movie-list';
+@import './components/footer';
+@import './components/library_plug';
+@import './components/students';
+@import './components/scroll-top';

@@ -1,0 +1,51 @@
+<div class="modal_thumb">
+
+{{#if poster_path}}<img src="https://image.tmdb.org/t/p/w342{{poster_path}}" alt="{{title}}"
+  class="film-poster" />
+{{else}}<img loading="lazy" src="https://raw.githubusercontent.com/karaaa006/filmoteka-project/main/src/images/no-poster.png" alt="No poster" class="film-poster">
+{{/if}}
+<div class="film-card_text-content">
+    <h2 class="film-name">{{title}}</h2>
+  <div class="meta-info_container">
+    <ul class="list meta-info_list">
+      <li class="meta-info_item">Vote / Votes</li>
+      <li class="meta-info_item">Popularity</li>
+      <li class="meta-info_item">Original Title</li>
+      <li class="meta-info_item">Genre</li>
+    </ul>
+     <ul class="list meta-info_list-content">
+          <li class="meta-info_item-content">
+            {{#if vote_average}}<span class="evg-vote_item {{rating_color}}">{{vote_average}}</span> / <span class="total-vote_item">{{vote_count}}</span>
+             {{else}}<span class="evg-vote_item">Not rated</span> / <span class="total-vote_item">Not rated</span>
+            {{/if}}
+          </li>
+          <li class="meta-info_item-content">{{popularity}}</li>
+          <li class="meta-info_item-content">
+              <span class="film-name_item">{{original_title}}</span>
+          </li>
+          <li class="meta-info_item-content">
+            {{#each genres}}
+              {{#if @last}}
+                {{this.name}}
+                {{else}}{{this.name}}, 
+              {{/if}}  
+            {{/each}}
+          </li>
+      </ul>
+  </div>
+      <h3 class="about-title">About</h3>
+        <p class="about-content">
+          {{overview}}
+        </p>
+        <div class="btn-container">
+          {{#if watched}}
+          <button type="submit" class="btn modal-btn del_watched">Delete from WATCHED</button>
+          {{else}}<button type="submit" class="btn modal-btn watched_btn">Add to watched</button>
+          {{/if}}
+          {{#if queue}}
+           <button type="submit" class="btn modal-btn del_queue">Delete from QUEUE</button>
+          {{else}} <button type="submit" class="btn modal-btn queue_btn">Add to queue</button>
+          {{/if}}
+        </div>
+  </div>
+</div>
